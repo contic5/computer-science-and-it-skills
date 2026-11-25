@@ -4,5 +4,11 @@ import typescriptLogo from './assets/typescript.svg'
 import viteLogo from './assets/vite.svg'
 import get_data from './read_excel';
 
-let skill_arr=get_data("Skills.xlsx");
-console.log(skill_arr);
+async function setup()
+{
+  skill_arr=await get_data("src/results/Analyzed Skills Stable.xlsx");
+  console.log(skill_arr);
+}
+
+let skill_arr:any[]=[]; 
+setup();
